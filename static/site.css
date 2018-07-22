@@ -1,137 +1,106 @@
+/* adding css variables for colors used: */
+:root{
+  --lavendar: #a7a5c6;
+  --off-white: #e6e8e6;
+  --green: #6e9075;
+  --brown: #a0a083;
+  --yellow-green: #e4e9b2;
+}
+
 /* styled whole page here, all according to BEM*/
 .Graph {
   display: grid;
-  background-color: #e6e8e6;
+  background-color: var(--off-white);
   grid-template-rows: 20% 80%;
   font-family: 'Lato', sans-serif;
 }
 
 .Graph-header {
   grid-row: 1;
-  background-color: #a7a5c6;
-  border: 5px solid #a0a083;
+  background-color: var(--lavendar);
+  border: 5px solid var(--brown);
 }
 
-.GraphContainer {
+.Graph-container {
   grid-row: 2;
-  border: 5px solid #a0a083;
+  border: 5px solid var(--brown);
   border-top: none;
 }
 
 /* flex inside of grid so I can add more bars later if needs be */
-.GraphBars {
+.Graph-bars {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-end;
   height: 600px;
 }
 
-.EmptyColumn {
-  height: 500px;
+/* This formats each bar */
+.Bar {
+  color: var(--green);
+  background-color: var(--yellow-green);
+  border: 5px solid var(--brown);
+  border-bottom: none;
+  padding: 5px;
 }
 
-.July2018 {
-  color: #6e9075;
-  background-color: #e4e9b2;
+/* 2018 */
+.Graph-bars div:nth-child(11) {
   height: 340px;
-  padding: 5px;
-  border: 5px solid #a0a083;
-  border-bottom: none;
 }
 
-.July2017 {
-  color: #6e9075;
-  background-color: #e4e9b2;
+/* 2017 */
+.Graph-bars div:nth-child(10) {
   height: 500px;
-  padding: 5px;
-  border: 5px solid #a0a083;
-  border-bottom: none;
 }
 
-/* extra bit of styling because it was the hottest year */
-.July2017:hover {
+.Graph-bars div:nth-child(10):hover {
   transition: 1.5s;
   height: 700px;
   background-color: red;
 }
 
-.July2016 {
-  color: #6e9075;
-  background-color: #e4e9b2;
+/* 2016 */
+.Graph-bars div:nth-child(9) {
   height: 360px;
-  padding: 5px;
-  border: 5px solid #a0a083;
-  border-bottom: none;
 }
 
-.July2015 {
-  color: #6e9075;
-  background-color: #e4e9b2;
-  height: 480px;
-  padding: 5px;
-  border: 5px solid #a0a083;
-  border-bottom: none;
+/* 2015 */
+.Graph-bars div:nth-child(8) {
+    height: 480px;
 }
 
-.July2014 {
-  color: #6e9075;
-  background-color: #e4e9b2;
+/* 2014 */
+.Graph-bars div:nth-child(7) {
   height: 500px;
-  padding: 5px;
-  border: 5px solid #a0a083;
-  border-bottom: none;
 }
 
-.July2013 {
-  color: #6e9075;
-  background-color: #e4e9b2;
+/* 2013 */
+.Graph-bars div:nth-child(6) {
   height: 320px;
-  padding: 5px;
-  border: 5px solid #a0a083;
-  border-bottom: none;
 }
 
-.July2012 {
-  color: #6e9075;
-  background-color: #e4e9b2;
+/* 2012 */
+.Graph-bars div:nth-child(5) {
   height: 340px;
-  padding: 5px;
-  border: 5px solid #a0a083;
-  border-bottom: none;
 }
 
-.July2011 {
-  color: #6e9075;
-  background-color: #e4e9b2;
+/* 2011 */
+.Graph-bars div:nth-child(4) {
   height: 300px;
-  padding: 5px;
-  border: 5px solid #a0a083;
-  border-bottom: none;
 }
 
-.July2010 {
-  color: #6e9075;
-  background-color: #e4e9b2;
+/* 2010 */
+.Graph-bars div:nth-child(3) {
   height: 440px;
-  padding: 5px;
-  border: 5px solid #a0a083;
-  border-bottom: none;
 }
 
-.July2009 {
-  color: #6e9075;
-  background-color: #e4e9b2;
+/* 2009 */
+.Graph-bars div:nth-child(2) {
   height: 340px;
-  padding: 5px;
-  border: 5px solid #a0a083;
-  border-bottom: none;
 }
 
-.July2008 {
-  color: #6e9075;
-  background-color: #e4e9b2;
+/* 2008 */
+.Graph-bars div:nth-child(1) {
   height: 360px;
-  padding: 5px;
-  border: 5px solid #a0a083;
-  border-bottom: none;
 }
