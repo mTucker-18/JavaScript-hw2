@@ -1,12 +1,12 @@
 /* styled whole page here, all according to BEM*/
-.MainContent {
+.Graph {
   display: grid;
   background-color: #e6e8e6;
   grid-template-rows: 20% 80%;
   font-family: 'Lato', sans-serif;
 }
 
-.GraphHeader {
+.Graph-header {
   grid-row: 1;
   background-color: #a7a5c6;
   border: 5px solid #a0a083;
