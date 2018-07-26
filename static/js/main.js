@@ -16,14 +16,14 @@ function renderData(item) {
   // console.log('render function running');
   let chart = document.querySelector(".Graph-bars");
   // console.log('did this part even run?');
-  let height = item['avg'];
+  let height = item['high'];
   let bar = document.createElement("div");
   // console.log('variables assigned');
   bar.classList.add("Bar");
   bar.textContent = "July" + item["year"];
   bar.style.height = height + "%";
   chart.appendChild(bar);
-  // console.log('new div made')
+  console.log('new div made');
 }
 
 function populateGraph(data) {
