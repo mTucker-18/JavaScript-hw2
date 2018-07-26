@@ -6,35 +6,33 @@ function getData() {
     // console.log("Got the data!");
     // console.log(data);
 
+    populateGraph(data);
     // TODO: Call a function to do something with this data.
     });
 }
 getData();
 
-function renderData() {
-  console.log('render function running');
-  // let json = getData();
-  // console.log('did this work?');
-  // console.log(json);
+function renderData(item) {
+  // console.log('render function running');
   let chart = document.querySelector(".Graph-bars");
-  console.log('did this part even run?');
-  let height = 50;
+  // console.log('did this part even run?');
+  let height = item['avg'];
   let bar = document.createElement("div");
-  console.log('variables assigned');
+  // console.log('variables assigned');
   bar.classList.add("Bar");
-  bar.textContent = "July 2018";
+  bar.textContent = "July" + item["year"];
   bar.style.height = height + "%";
   chart.appendChild(bar);
-  console.log('new div made')
+  // console.log('new div made')
 }
-renderData();
 
-// function populateGraph() {
-//   console.log('pop graph function running');
-//   let jsonData = getData();
-//   for (let year of jsonData) {
-//     console.log(year);
-//   }
-//   console.log('graph data populated?')
-// }
-// populateGraph();
+function populateGraph(data) {
+  // console.log('pop graph function running');
+  for (let item of data) {
+    // console.log(item);
+    renderData(item);
+  }
+  // document.getElementById("demo").innerHTML = x;
+
+  // console.log('graph data populated?')
+}
