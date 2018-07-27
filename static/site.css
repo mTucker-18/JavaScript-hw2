@@ -43,9 +43,3 @@
   border-bottom: none;
   padding: 5px;
 }
-
-.Graph-bars div:nth-child(10):hover {
-  transition: 1.5s;
-  /* height: 120%; */
-  background-color: red;
-}
