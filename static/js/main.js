@@ -16,7 +16,7 @@ function renderData(item) {
   // console.log('render function running');
   let chart = document.querySelector(".Graph-bars");
   // console.log('did this part even run?');
-  let height = item['high'];
+  let height = item['avg'];
   let bar = document.createElement("div");
   // console.log('variables assigned');
   bar.classList.add("Bar");
@@ -35,4 +35,12 @@ function populateGraph(data) {
   // document.getElementById("demo").innerHTML = x;
 
   // console.log('graph data populated?')
+}
+
+function highTemp() {
+  console.log('high button worked!');
+}
+
+function lowTemp() {
+  console.log('low button worked!');
 }
